@@ -1,0 +1,126 @@
+$burg: $md2;
+
+
+.burger {
+  display: none;
+
+  @media screen and (max-width: #{$burg}px) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+
+  &:before,
+  &:after {
+    @media screen and (max-width: #{$burg}px) {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: $burger;
+      height: 4px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &:before {
+    @media screen and (max-width: #{$burg}px) {
+      top: 0;
+    }
+  }
+
+  &:after {
+    @media screen and (max-width: #{$burg}px) {
+      bottom: 0;
+    }
+  }
+
+  span {
+    @media screen and (max-width: #{$burg}px) {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: $burger;
+      height: 4px;
+      top: 8px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+}
+
+.burger .active:before {
+  @media screen and (max-width: #{$burg}px) {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+
+}
+
+.burger .active:after {
+  @media screen and (max-width: #{$burg}px) {
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+
+}
+
+.burger .active span {
+  @media screen and (max-width: #{$burg}px) {
+    transform: scale(0);
+  }
+
+}
+// .nav
+.nav {
+  @media screen and (max-width: #{$burg}px) {
+    position: absolute;
+    overflow: auto;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $burger-bg;
+    z-index: 2;
+    transition: all 0.5s ease 0s;
+  }
+  // .nav__list
+  &__list {
+    display: flex;
+    @media screen and (max-width: #{$burg}px) {
+      flex-direction: column;
+      margin: 100px 30px;
+    }
+  }
+  // .nav__item
+  &__item {
+    @media screen and (max-width: #{$burg}px) {
+      display: block;
+      border-bottom: 1px solid $burger-li;
+      padding: 20px 0;
+      // height: 49px;
+    }
+  }
+  // .nav__link
+  &__link {
+    @media screen and (max-width: #{$burg}px) {
+      display: block;
+    }
+  }
+}
+.nav.active {
+  @media screen and (max-width: #{$burg}px) {
+    top: 0;
+  }
+}
+
+
+
+// body.lock{
+//     @media screen and (max-width: #{$burg}px) { 
+//           overflow: hidden;
+//       }
+// }

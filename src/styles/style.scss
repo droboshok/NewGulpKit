@@ -1,5 +1,5 @@
 @import "_components/_normalize.scss";
-@import "_components/_stylesheet.scss";
+// @import "_components/_stylesheet.scss";
 @import "_components/_vars.scss";
 @import "_components/_mixin.scss";
 
@@ -69,6 +69,7 @@ img{
 
 @import "_components/_global.scss";
 @import "_header.scss";
+@import "_components/_burger.scss";
 @import "_main.scss";
 @import "_footer.scss";
 

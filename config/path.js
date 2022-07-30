@@ -14,6 +14,11 @@ module.exports = {
     watch: pathSrc + "/styles/**/*.scss",
     dest: pathDest + "/css",
   },
+  js: {
+    src: pathSrc + "/js/main.js",
+    watch: pathSrc + "/js/**/*.js",
+    dest: pathDest + "/js",
+  },
   svg: {
     src: pathSrc + "/img/svg/*.svg",
     watch: pathSrc + "/img/svg/*.svg",
