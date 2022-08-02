@@ -85,7 +85,7 @@ const html = function () {
 }
 
 const clear = function() {
-  return del(["dest/**", "!dest/img", "!dest/favicons", "!dest/font"]);
+  return del(["dest/**", "!dest/img", "!dest/favicons", "!dest/fonts"]);
 }
 
 const server = (cb) => {
