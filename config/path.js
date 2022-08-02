@@ -14,6 +14,11 @@ module.exports = {
     watch: pathSrc + "/styles/**/*.scss",
     dest: pathDest + "/css",
   },
+  vendor:{
+    src: pathSrc + "/styles/_vendor/*.css",
+    watch: pathSrc + "/styles/_vendor/*.css",
+    dest: pathDest + "/css",
+  },
   js: {
     src: pathSrc + "/js/main.js",
     watch: pathSrc + "/js/**/*.js",

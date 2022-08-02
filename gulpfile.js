@@ -21,7 +21,7 @@ const svg = require("./task/svg.js");
 const font = require("./task/font.js");
 const img = require("./task/img.js");
 const fontstyle = require("./task/new_font.js");
-
+const vendor = require("./task/vendor.js");
 
 
 
@@ -47,7 +47,7 @@ const js = function () {
 
 //SCSS
 const scss = function () {
-  return src("./src/styles/*.scss")
+  return src(["./src/styles/*.scss", "!./src/styles/_vendor"])
     .pipe(
       plumber({
         errorHandler: notify.onError((error) => ({
@@ -105,9 +105,10 @@ const watcher = (cb) => {
 
   watch("./src/html/**/*.html", html);
    watch(path.js.watch, js);
-  watch("./src/styles/**/*.scss", scss).on("all", browserSync.reload);
+  watch(["./src/styles/**/*.scss","!./src/styles/_vendor"], scss).on("all", browserSync.reload);
   watch("./src/img/svg/*.svg", svg);
   watch(path.img.watch, img);
+  watch(path.vendor.watch, vendor);
   watch("dest/**/*.html").on("change", browserSync.reload);
   cb();
 }
@@ -120,8 +121,10 @@ exports.svg = svg;
 exports.img = img;
 exports.font = font;
 exports.fontstyle = fontstyle;
-
+exports.vendor = vendor;
 
 exports.newfont = series(font, fontstyle);
 
-exports.default = series(clear, parallel(html,scss,js), parallel(watcher, server));
+exports.default = series(
+  clear,parallel(html, scss, js, img, vendor),parallel(watcher,server)
+);
