@@ -1,2 +1,2 @@
-@@include("burger.js");
+@@include("_chunk/burger.js");
 // @import "burger";
