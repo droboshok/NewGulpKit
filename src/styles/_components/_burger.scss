@@ -1,5 +1,4 @@
-$burg: $md2;
-
+// BURGER
 
 .burger {
   display: none;
@@ -52,23 +51,25 @@ $burg: $md2;
 
 }
 
-.burger .active:before {
+.burger.active:before {
   @media screen and (max-width: #{$burg}px) {
     transform: rotate(45deg);
     top: 8px;
+    background-color: $burger-close;
   }
 
 }
 
-.burger .active:after {
+.burger.active:after {
   @media screen and (max-width: #{$burg}px) {
     transform: rotate(-45deg);
     bottom: 8px;
+    background-color: $burger-close;
   }
 
 }
 
-.burger .active span {
+.burger.active span {
   @media screen and (max-width: #{$burg}px) {
     transform: scale(0);
   }
@@ -101,6 +102,7 @@ $burg: $md2;
       display: block;
       border-bottom: 1px solid $burger-li;
       padding: 20px 0;
+      color: $burger-link;
       // height: 49px;
     }
   }
