@@ -19,6 +19,11 @@
   
 }
 
+@mixin adaptive-font($pcFont,$mobFont) {
+
+    font-size: calc(#{$pcFont}px + $mobFont * ((100vw - 767px) / 1920));
+  
+}
 @mixin reset-link {
   text-decoration: none;
   color: inherit;

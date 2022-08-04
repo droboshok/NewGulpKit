@@ -1,0 +1,6 @@
+<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 0V10H0V12H2V14H0V16H2V20H4V16H9V14H4V12H10C13.3008 12 16 9.30078 16 6C16 2.69922 13.3008 0 10 0H2ZM4 2H10C12.2188 2 14 3.78125 14 6C14 8.21875 12.2188 10 10 10H4V2Z" fill="currentColor"/>
+</svg>
+
+
+<!-- background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0V10H0V12H2V14H0V16H2V20H4V16H9V14H4V12H10C13.3008 12 16 9.30078 16 6C16 2.69922 13.3008 0 10 0H2ZM4 2H10C12.2188 2 14 3.78125 14 6C14 8.21875 12.2188 10 10 10H4V2Z' fill='currentColor'/%3E%3C/svg%3E"); -->
