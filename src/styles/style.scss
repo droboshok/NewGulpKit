@@ -1,6 +1,7 @@
 @import "_components/_normalize.scss";
 // @import "_components/_stylesheet.scss";
 @import "_components/_vars.scss";
+@import "_components/_function.scss";
 @import "_components/_mixin.scss";
 
 
@@ -35,9 +36,9 @@ html {
 }
 .container {
   width: 100%;
-  max-width: 1280px;
-  // padding-left: 15px;
-  // padding-right: 15px;
+  max-width: calc(30px + #{$conteinerWidth}px);
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
   @media (max-width: #{$md1}px) {max-width: 970px;}
   @media screen and (max-width: #{$md2}px) {max-width: 720px;}

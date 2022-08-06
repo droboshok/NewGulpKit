@@ -24,6 +24,13 @@
     font-size: calc(#{$pcFont}px + $mobFont * ((100vw - 767px) / 1920));
   
 }
+@mixin adaptive($_var,$pcFont,$mobFont) {
+
+    $_var: calc(#{$pcFont}px + $mobFont * ((100vw - 767px) / 1920));
+  
+}
+
+
 @mixin reset-link {
   text-decoration: none;
   color: inherit;
@@ -44,4 +51,26 @@
 }
 
 
+@mixin adaptive-font($pc_value,$mob_value) {
+  $add_size: $pc_value - $mob_value;
+  $add_mobsize: $add_size + $add_size * 0.7;
+  font-size: calc(#{$mob_value}px + #{$add_size} * (100vw / #{$maxWidth}));
+  @media screen and (max-width: 767px) { 
+	font-size: calc(#{$mob_value}px + #{$add_size} * ((100vw - 320px) / #{$maxWidth}));
+  
+}
+}
 
+@mixin adaptivValue ($value,$pc_value,$mob_value){
+  $add_size: $pc_value - $mob_value;
+  $add_mobsize: $add_size + $add_size * 0.7;
+  $value: calc(#{$mob_value}px + #{$add_size} * (100vw / #{$maxWidth}));
+  @media screen and (max-width: 767px) { 
+	$value: calc(#{$mob_value}px + #{$add_size} * ((100vw - 320px) / #{$maxWidth}));
+}
+  // @media screen and (min-width: 767px) { 
+	
+// }
+
+  
+}
