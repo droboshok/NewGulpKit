@@ -1,3 +1,4 @@
-@function percent($width1,$maxWhidth){
-  @return ($widt1 / $maxWidth) * 100%;
+@function percent($w, $maxWhidth){
+  $result: math.div($w, $maxWhidth) * 100%;
+  @return $result;
 }
