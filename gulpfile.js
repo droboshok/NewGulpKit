@@ -22,6 +22,7 @@ const font = require("./task/font.js");
 const img = require("./task/img.js");
 const fontstyle = require("./task/new_font.js");
 const vendor = require("./task/vendor.js");
+const copy = require("./task/copy.js");
 
 
 
@@ -109,6 +110,14 @@ const watcher = (cb) => {
   watch("./src/img/svg/*.svg", svg);
   watch(path.img.watch, img);
   watch(path.vendor.watch, vendor);
+  watch(
+    ["!./src/html",
+    "!./src/font",
+    "!./src/img",
+    "!./src/js",
+    "!./src/styles",
+    "./src/**"], copy
+  );
   watch("dest/**/*.html").on("change", browserSync.reload);
   cb();
 }
@@ -122,9 +131,10 @@ exports.img = img;
 exports.font = font;
 exports.fontstyle = fontstyle;
 exports.vendor = vendor;
+exports.copy = copy;
 
 exports.newfont = series(font, fontstyle);
 
 exports.default = series(
-  clear,parallel(html, scss, js, img, vendor),parallel(watcher,server)
+  clear,parallel(html, scss, js, img, copy, vendor),parallel(watcher,server)
 );

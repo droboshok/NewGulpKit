@@ -1,6 +1,7 @@
 @use "sass:math";
 @import "_components/_normalize.scss";
 // @import "_components/_stylesheet.scss";
+// @import "_components/_icon__fonts.scss";
 @import "_components/_vars.scss";
 @import "_components/_function.scss";
 @import "_components/_mixin.scss";
@@ -75,19 +76,19 @@ img{
   overflow: hidden;
 }
 
-.rub {
+// .rub {
 
-  &:after{
-    content:"";
-    background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 16 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0V10H0V12H2V14H0V16H2V20H4V16H9V14H4V12H10C13.3008 12 16 9.30078 16 6C16 2.69922 13.3008 0 10 0H2ZM4 2H10C12.2188 2 14 3.78125 14 6C14 8.21875 12.2188 10 10 10H4V2Z' fill='currentColor'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 23px;
-    height: 23px;
+//   &:after{
+//     content:"";
+//     background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 16 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0V10H0V12H2V14H0V16H2V20H4V16H9V14H4V12H10C13.3008 12 16 9.30078 16 6C16 2.69922 13.3008 0 10 0H2ZM4 2H10C12.2188 2 14 3.78125 14 6C14 8.21875 12.2188 10 10 10H4V2Z' fill='currentColor'/%3E%3C/svg%3E");
+//     background-repeat: no-repeat;
+//     display: inline-block;
+//     width: 23px;
+//     height: 23px;
   
-    // background-color: red;
-  }
-}
+//     // background-color: red;
+//   }
+// }
 
 @import "_components/_global.scss";
 @import "_header.scss";
