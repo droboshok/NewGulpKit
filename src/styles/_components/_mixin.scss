@@ -64,13 +64,70 @@
 @mixin adaptivValue ($value,$pc_value,$mob_value){
   $add_size: $pc_value - $mob_value;
   $add_mobsize: $add_size + $add_size * 0.7;
-  $value: calc(#{$mob_value}px + #{$add_size} * (100vw / #{$maxWidth}));
+  #{$value}: calc(#{$mob_value}px + #{$add_size} * (100vw / #{$maxWidth}));
   @media screen and (max-width: 767px) { 
-	$value: calc(#{$mob_value}px + #{$add_size} * ((100vw - 320px) / #{$maxWidth}));
+	#{$value}: calc(#{$mob_value}px + #{$add_size} * ((100vw - 320px) / #{$maxWidth}));
 }
   // @media screen and (min-width: 767px) { 
 	
 // }
-
-  
 }
+
+@mixin h-0 {
+	font-size:64px;
+	font-family:"Inter";
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:none;
+}
+@mixin descriptor {
+	font-size:32px;
+	font-family:"Inter";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:none;
+}
+@mixin text-14 {
+	font-size:14px;
+	font-family:"Inter";
+	font-weight:400;
+	font-style:normal;
+	line-height:120%;
+	text-decoration:none;
+	text-transform:none;
+}
+@mixin меню {
+	font-size:14px;
+	font-family:"Inter";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+@mixin показатели {
+	font-size:14px;
+	font-family:"Inter";
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+@mixin text-12 {
+	font-size:12px;
+	font-family:"Inter";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:lowercase;
+}
+@mixin h-1 {
+	font-size:16px;
+	font-family:"Inter";
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
