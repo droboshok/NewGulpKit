@@ -86,7 +86,13 @@ const html = function () {
 }
 
 const clear = function() {
-  return del(["dest/**", "!dest/img", "!dest/favicons", "!dest/fonts"]);
+  return del([
+    "dest/**",
+    "!dest/img",
+    "!dest/favicons",
+    "!dest/fonts",
+    "!dest/icon_font"
+  ]);
 }
 
 const server = (cb) => {
@@ -110,14 +116,7 @@ const watcher = (cb) => {
   watch("./src/img/svg/*.svg", svg);
   watch(path.img.watch, img);
   watch(path.vendor.watch, vendor);
-  watch(
-    ["!./src/html",
-    "!./src/font",
-    "!./src/img",
-    "!./src/js",
-    "!./src/styles",
-    "./src/**"], copy
-  );
+  watch("./src/icon_font", copy);
   watch("dest/**/*.html").on("change", browserSync.reload);
   cb();
 }

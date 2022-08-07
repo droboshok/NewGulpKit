@@ -5,14 +5,7 @@ const notify = require("gulp-notify");
 
 
 const copy = function () {
-  return src([
-    "!./src/html",
-    "!./src/font",
-    "!./src/img",
-    "!./src/js",
-    "!./src/styles",
-    "./src/**",
-  ])
+  return src("./src/icon_font/*")
     .pipe(
       plumber({
         errorHandler: notify.onError((error) => ({
@@ -22,7 +15,7 @@ const copy = function () {
       })
     )
 
-    .pipe(dest("./dest/"));
+    .pipe(dest("./dest/icon_font"));
 };
 
 module.exports = copy;
