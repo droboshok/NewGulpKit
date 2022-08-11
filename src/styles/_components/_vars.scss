@@ -9,9 +9,9 @@ $maxWidth: 1440;
 $conteinerWidth: 1200;
 //FONTS
 
-  $font-size:14px;
+  $font-size: 16px;
   // $font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  $font-family: "Inter",sans-serif;
+  $font-family: "Roboto",sans-serif;
   $text-rendering: optimizeLegibility;
   $line-height: 120%;
   
@@ -22,22 +22,26 @@ $conteinerWidth: 1200;
 $white: #ffffff;
 $black: #000000;
 
-$color-dark: #131313;
-$color-white: #ffffff;
-$color-gray: #6f6f6f;
-$color-red: #ff4040;
+
+
+
+// NAV COLORS
+
+$color-text: $black;
+$color-nav:$white;
+$bg-nav:$black;
 
 
 
 // COLORS BURGER
 
 $burg: $md2;
-$burger: $color-dark;
-$burger-close: $color-dark;
+$burger: $color-nav;
+$burger-close: $color-nav;
 
-$burger-bg: $white;
-$burger-link: $black;
-$burger-li: $color-dark;
+$burger-bg: $bg-nav;
+$burger-link: $color-nav;
+$burger-li: $color-nav;
 
 
 
