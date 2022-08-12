@@ -28,11 +28,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.g-insta-f_m:before {
+.g-twitter-f-m:before {
+  content: "\e915";
+}
+
+.g-insta-f-m:before {
   content: "\e900";
 }
 
-.g-vk-f_m:before {
+.g-vk-f-m:before {
   content: "\e914";
 }
 
@@ -92,11 +96,11 @@
   content: "\e909";
 }
 
-.g-facebook:before {
+.g-facebook-f-m:before {
   content: "\e90a";
 }
 
-.g-linkedin:before {
+.g-linkedin-f-m:before {
   content: "\e90b";
 }
 
@@ -104,7 +108,7 @@
   content: "\e90c";
 }
 
-.g-youtube:before {
+.g-youtube-f-m:before {
   content: "\e90d";
 }
 
