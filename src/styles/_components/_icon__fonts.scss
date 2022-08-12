@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../icon_font/icomoon.eot?hc9kiw');
-  src:  url('../icon_font/icomoon.eot?hc9kiw#iefix') format('embedded-opentype'),
+  src: url('../icon_font/icomoon.eot?hc9kiw');
+  src: url('../icon_font/icomoon.eot?hc9kiw#iefix') format('embedded-opentype'),
     url('../icon_font/icomoon.ttf?hc9kiw') format('truetype'),
     url('../icon_font/icomoon.woff?hc9kiw') format('woff'),
     url('../icon_font/icomoon.svg?hc9kiw#icomoon') format('svg');
@@ -11,7 +11,9 @@
 }
 
 
-[class^="g-"], [class*="g-"]::before,[class*="g-"]::after {
+[class^="g-"],
+[class*="g-"]::before,
+[class*="g-"]::after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,48 +28,86 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.g-insta-f_m:before {
+  content: "\e900";
+}
+
+.g-vk-f_m:before {
+  content: "\e914";
+}
+
+.g-location:before {
+  content: "\e910";
+}
+
+.g-clock:before {
+  content: "\e911";
+}
+
+.g-phone:before {
+  content: "\e913";
+}
+
 .g-telegram:before {
   content: "\e90e";
 }
-.g-angle-down:before {
-  content: "\e900";
+
+.g-vk:before {
+  content: "\e90f";
 }
-.g-angle-left:before {
+
+.g-angle-down:before {
   content: "\e901";
 }
-.g-angle-right:before {
+
+.g-angle-left:before {
   content: "\e902";
 }
-.g-angle-up:before {
+
+.g-angle-right:before {
   content: "\e903";
 }
-.g-check:before {
+
+.g-angle-up:before {
   content: "\e904";
 }
-.g-chevron-down:before {
+
+.g-check:before {
   content: "\e905";
 }
-.g-chevron-left:before {
+
+.g-chevron-down:before {
   content: "\e906";
 }
-.g-chevron-right:before {
+
+.g-chevron-left:before {
   content: "\e907";
 }
-.g-chevron-up:before {
+
+.g-chevron-right:before {
   content: "\e908";
 }
-.g-facebook:before {
+
+.g-chevron-up:before {
   content: "\e909";
 }
-.g-linkedin:before {
+
+.g-facebook:before {
   content: "\e90a";
 }
-.g-whatsapp:before {
+
+.g-linkedin:before {
   content: "\e90b";
 }
-.g-youtube:before {
+
+.g-whatsapp:before {
   content: "\e90c";
 }
+
+.g-youtube:before {
+  content: "\e90d";
+}
+
 .g-rub:after {
   content: "\e90d";
 }
